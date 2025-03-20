@@ -45,12 +45,15 @@ def opt_input():
 
 # 1. Crear un programa que imprima por pantalla el mensaje "Hola Mundo!"
 def hola_mundo():
+    print('\n')
     print("Hola Mundo!")
 
 #2. Crear un programa que pida al usuario su nombre e imprima por pantalla un saludo usando el nombre ingresado. Por ejemplo: si el usuario ingresa “Marcos”, el programa debe imprimir por pantalla “Hola Marcos!”. Consejo: esto será más sencillo si utilizas print(f…) para realizar la impresión por pantalla. 
 
 def hola_user():
     nombre = input('Por favor ingrese su nombre: ')
+
+    print('\n')
     print(f'Hola {nombre}')
 
 #3. Crear un programa que pida al usuario su nombre, apellido, edad y lugar de residencia e imprima por pantalla una oración con los datos ingresados. Por ejemplo: si el usuario ingresa “Marcos”, “Pérez”, “30” y “Argentina”, el programa debe imprimir “Soy Marcos Pérez, tengo 30 años y vivo en Argentina”. Consejo: esto será más sencillo si utilizas print(f…) para realizar la impresión por pantalla. 
@@ -60,6 +63,8 @@ def presentacion():
     apellido = input('Ingrese su apellido por favor: ')
     edad = input('Ingrese su edad por favor: ')
     residencia = input('Ingrese su lugar de residencia: ')
+
+    print('\n')
     print(f'Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}')
 
 #4. Crear un programa que pida al usuario el radio de un círculo e imprima por pantalla su área y su perímetro.
@@ -79,6 +84,7 @@ def circulo():
     radio = r_input()
     if(radio == 'e' or radio == 'E'):
         return
+    print('\n')
     print('Área: ', round(math.pi * radio**2,2)) 
     print('Perímetro: ', round(2*math.pi*radio,2))
 
@@ -89,7 +95,10 @@ def seg_hs():
     seg = e_input('los segundos')
     if(seg == 'e' or seg == 'E'):
         return
-    print(f'{seg} segundo/s equivalen a: {round(seg/3600,5)} horas')
+    hs, min = divmod(seg, 3600)
+    print(hs, min)
+    print('\n')
+    print(f'{seg} segundo/s equivalen a {hs} horas y {min//60} minutos')
 
 #6. Crear un programa que pida al usuario un número e imprima por pantalla la tabla de multiplicar de dicho número.
 
@@ -97,6 +106,7 @@ def tabla():
     num = e_input('el número')
     if(num == 'e' or num == 'E'):
         return
+    print('\n')
     print(f'Tabla del {num}')
     for i in range(11):
         print(f'{num} x {i} = {num * i} ')
@@ -126,6 +136,7 @@ def operaciones():
     if(num2 == 'e' or num2 == 'E'):
         return
 
+    print('\n')
     print(f'Suma: {num1 + num2}')
     print(f'Resta: {num1 - num2}')
     print(f'Multiplicación: {num1 * num2}')
@@ -142,6 +153,7 @@ def imc():
     if(altura == 'e' or altura == 'E'):
         return
 
+    print('\n')
     print(f'IMC: {round(kg/altura**2,2)}')
 
 #9. Crear un programa que pida al usuario una temperatura en grados Celsius e imprima por pantalla su equivalente en grados Fahrenheit.
@@ -150,6 +162,7 @@ def c_f():
     g = f_input('la temperatura en C° (Celsius)')
     if(g == 'e' or g == 'E'):
         return
+    print('\n')
     print(f'{g}°C son {9/5 * g + 32}°F')
 
 #10. Crear un programa que pida al usuario  3 números e imprima por pantalla el promedio de dichos números.
@@ -179,11 +192,12 @@ def promedio():
     num3 = get_num_p('tercer')
     if(num3 == 'e' or num3 == 'E'):
         return
-
+    print('\n')
     print('Promedio: ', round((num1+num2+num3)/3,2))
 
 def main_loop():
     while True:
+        print('\n\n')
         print('¿Qué ejercicio desea ejecutar?')
         print('1. Hola mundo')
         print('2. Hola nombre')
