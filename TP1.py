@@ -96,7 +96,7 @@ def seg_hs():
     if(seg == 'e' or seg == 'E'):
         return
     hs, min = divmod(seg, 3600)
-    print(hs, min)
+    
     print('\n')
     print(f'{seg} segundo/s equivalen a {hs} horas y {min//60} minutos')
 
